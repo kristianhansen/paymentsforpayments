@@ -1,0 +1,108 @@
+/* ABOUTME: Stylesheet for the paymentsforpayments.com landing page.
+   ABOUTME: Only the rules the page actually renders. */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #111111;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 2;
+    margin: 0 auto;
+    max-width: 40em;
+    padding: 3em 2em;
+    text-align: left;
+}
+
+/* Links keep the old pill-on-hover treatment. The negative margin cancels the
+   padding so inline links don't shift the surrounding text. */
+a,
+a:visited {
+    border-radius: 4px;
+    color: #020659;
+    margin: 0 -0.25em;
+    padding: 0 0.25em;
+    transition: all 300ms linear;
+}
+
+a:hover,
+a:focus-visible {
+    background-color: #020659;
+    color: #ffffff;
+}
+
+a:focus-visible {
+    outline: 3px solid #F2b705;
+    outline-offset: 2px;
+}
+
+h1,
+h2 {
+    color: #020659;
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 2.5em;
+}
+
+/* Subtitle under the h1. Was an <h3> on the old page, which skipped a heading
+   level for screen readers; it's a paragraph now and styled to match. */
+.lede {
+    font-size: 1.17em;
+    font-weight: 700;
+    margin-top: 1.25em;
+    text-align: center;
+}
+
+p {
+    margin-top: 1.25em;
+}
+
+.embed {
+    margin-top: 1.25em;
+    text-align: center;
+}
+
+footer {
+    border-top: 2px solid #eee;
+    color: #666666;
+    font-size: smaller;
+    margin-top: 3em;
+    padding: 2em 2.5em;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 1.1em;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a,
+    a:visited {
+        transition: none;
+    }
+}
